@@ -11,6 +11,7 @@ namespace SpaceRunner.Controllers
 {
     public class PlayerController : MonoBehaviour
     {
+        [SerializeField] private float moveBoundary = 4.5f;
         [SerializeField] private float moveSpeed = 10f;
         [SerializeField] float jumpForce = 500f;
         
@@ -19,6 +20,9 @@ namespace SpaceRunner.Controllers
         private IInputReader _input;
         private float _horizontal;
         private bool isJump;
+
+        public float MoveSpeed => moveSpeed;
+        public float MoveBoundary => moveBoundary;
         private void Awake()
         {
             _horizontalMover = new HorizontalMover(this);
@@ -38,7 +42,7 @@ namespace SpaceRunner.Controllers
 
         private void FixedUpdate()
         {
-            _horizontalMover.TickFixed(_horizontal, moveSpeed);
+            _horizontalMover.TickFixed(_horizontal);
 
             if (isJump)
             {
