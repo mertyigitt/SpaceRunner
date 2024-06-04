@@ -8,6 +8,7 @@ namespace SpaceRunner.Movements
     public class JumpWithRigidbody
     {
         private Rigidbody _rigidbody;
+        public bool CanJump => _rigidbody.velocity.y != 0;
 
         public JumpWithRigidbody(PlayerController playerController)
         {
@@ -16,7 +17,7 @@ namespace SpaceRunner.Movements
         
         public void TickFixed(float jumpForce)
         {
-            if(_rigidbody.velocity.y != 0) return;
+            if(CanJump) return;
             
             _rigidbody.velocity = Vector3.zero;
             _rigidbody.AddForce(Vector3.up *  jumpForce * Time.deltaTime);
