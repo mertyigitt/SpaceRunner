@@ -1,10 +1,10 @@
+using SpaceRunner.Managers;
 using UnityEngine;
 
 namespace SpaceRunner.Controllers
 {
     public class SpawnerController : MonoBehaviour
     {
-        [SerializeField] private EnemyController enemyPrefab;
         [SerializeField] [Range(0.1f, 5f)] private float min = 0.1f;
         [SerializeField] [Range(6f, 15f)] float max = 15f;
         
@@ -27,7 +27,11 @@ namespace SpaceRunner.Controllers
 
         private void Spawn()
         {
-            Instantiate(enemyPrefab, transform.position, transform.rotation, transform);
+            EnemyController newEnemy = EnemyManager.Instance.GetPool();
+            newEnemy.transform.parent = this.transform;
+            newEnemy.transform.position = this.transform.position;
+            newEnemy.gameObject.SetActive(true);
+            
             _currentSpawnTime = 0;
             GetRandomMaxTime();
         }

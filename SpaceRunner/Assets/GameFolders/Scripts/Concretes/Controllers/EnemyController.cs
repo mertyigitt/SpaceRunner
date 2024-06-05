@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using SpaceRunner.Managers;
 using SpaceRunner.Movements;
 using UnityEngine;
 
@@ -39,7 +40,7 @@ namespace SpaceRunner.Controllers
         
         private void KillYourSelf()
         {
-            Destroy(this.gameObject);
+            EnemyManager.Instance.SetPool(this);
         }
     }
 }
