@@ -1,21 +1,21 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using SpaceRunner.Abstracts.Utilities;
 using UnityEngine;
 
 namespace SpaceRunner.Managers
 {
-    public class GameManager : MonoBehaviour
+    public class GameManager : SingletonMonoBehaviourObject<GameManager>
     {
-        // Start is called before the first frame update
-        void Start()
+        private void Awake()
         {
-        
+            SingletonThisObject(this);
         }
-
-        // Update is called once per frame
-        void Update()
-        {
         
+        public void StopGame()
+        {
+            Time.timeScale = 0f;
         }
     }
 }

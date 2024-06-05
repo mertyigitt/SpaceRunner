@@ -99,7 +99,7 @@ PrefabInstance:
     - target: {fileID: 1088431798669250993, guid: 251a592c8f0bd5544a296fc6d42f3a9b,
         type: 3}
       propertyPath: maxLifeTime
-      value: 7
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4249666442524818020, guid: 251a592c8f0bd5544a296fc6d42f3a9b,
         type: 3}

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using SpaceRunner.Abstracts.Inputs;
 using SpaceRunner.Inputs;
+using SpaceRunner.Managers;
 using SpaceRunner.Movements;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -20,6 +21,7 @@ namespace SpaceRunner.Controllers
         private IInputReader _input;
         private float _horizontal;
         private bool isJump;
+        private bool _isDead = false;
 
         public float MoveSpeed => moveSpeed;
         public float MoveBoundary => moveBoundary;
@@ -32,6 +34,8 @@ namespace SpaceRunner.Controllers
 
         private void Update()
         {
+            if(_isDead) return;
+            
             _horizontal = _input.Horizontal;
 
             if (_input.IsJump)
@@ -50,6 +54,17 @@ namespace SpaceRunner.Controllers
             }
             
             isJump = false;
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            EnemyController enemyController = other.GetComponent<EnemyController>();
+
+            if (enemyController != null)
+            {
+                _isDead = true;
+                GameManager.Instance.StopGame();
+            }
         }
     }
 }
