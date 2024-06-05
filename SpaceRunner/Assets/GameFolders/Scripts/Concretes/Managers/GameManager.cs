@@ -9,6 +9,8 @@ namespace SpaceRunner.Managers
 {
     public class GameManager : SingletonMonoBehaviourObject<GameManager>
     {
+        public event Action OnGameStop;
+        
         private void Awake()
         {
             SingletonThisObject(this);
@@ -17,6 +19,7 @@ namespace SpaceRunner.Managers
         public void StopGame()
         {
             Time.timeScale = 0f;
+            OnGameStop?.Invoke();
         }
 
         public void LoadScene(string sceneName)
