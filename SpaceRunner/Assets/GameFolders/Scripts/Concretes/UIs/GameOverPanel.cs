@@ -5,17 +5,18 @@ using UnityEngine;
 
 namespace SpaceRunner.UIs
 {
-    public class MenuPanel : MonoBehaviour
+    public class GameOverPanel : MonoBehaviour
     {
-        public void StartButton()
+
+        public void RestartButton()
         {
             GameManager.Instance.LoadScene("GameScene");
         }
         
+
         public void ExitButton()
         {
-            GameManager.Instance.ExitGame();
+            GameManager.Instance.LoadScene("MenuScene");
         }
-        
     }
 }
