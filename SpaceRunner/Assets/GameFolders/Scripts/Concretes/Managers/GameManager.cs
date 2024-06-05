@@ -17,5 +17,16 @@ namespace SpaceRunner.Managers
         {
             Time.timeScale = 0f;
         }
+
+        public void LoadScene()
+        {
+            
+        }
+
+        public void ExitGame()
+        {
+            Debug.Log("Exit");
+            Application.Quit();
+        }
     }
 }
