@@ -1,3 +1,4 @@
+using SpaceRunner.Enums;
 using SpaceRunner.Managers;
 using UnityEngine;
 
@@ -10,6 +11,10 @@ namespace SpaceRunner.Controllers
         
         private float maxSpawnTime;
         private float _currentSpawnTime;
+        private int _index = 0;
+        private float _maxAddEnemyTime;
+
+        public bool CanIncrease => _index < EnemyManager.Instance.Count;
 
         private void OnEnable()
         {
@@ -23,11 +28,19 @@ namespace SpaceRunner.Controllers
             {
                 Spawn();
             }
+
+            if (!CanIncrease) return;
+
+            if (_maxAddEnemyTime < Time.time)
+            {
+                _maxAddEnemyTime = Time.time + EnemyManager.Instance.AddDelayTime;
+                IncreaseIndex();
+            }
         }
 
         private void Spawn()
         {
-            EnemyController newEnemy = EnemyManager.Instance.GetPool();
+            EnemyController newEnemy = EnemyManager.Instance.GetPool((EnemyEnum)Random.Range(0,_index));
             newEnemy.transform.parent = this.transform;
             newEnemy.transform.position = this.transform.position;
             newEnemy.gameObject.SetActive(true);
@@ -39,6 +52,14 @@ namespace SpaceRunner.Controllers
         private void GetRandomMaxTime()
         {
             maxSpawnTime = Random.Range(min, max);
+        }
+        
+        private void IncreaseIndex()
+        {
+            if (CanIncrease)
+            {
+                _index++;
+            }
         }
     }
 }
