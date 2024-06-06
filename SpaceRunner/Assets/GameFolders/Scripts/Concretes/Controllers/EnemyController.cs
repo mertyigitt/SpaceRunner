@@ -1,22 +1,20 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using SpaceRunner.Abstracts.Controllers;
 using SpaceRunner.Managers;
 using SpaceRunner.Movements;
 using UnityEngine;
 
 namespace SpaceRunner.Controllers
 {
-    public class EnemyController : MonoBehaviour
+    public class EnemyController : MyCharacterController, IEntityController
     {
-        [SerializeField] float moveSpeed = 10f;
         [SerializeField] private float maxLifeTime = 6f;
         
         private VerticalMover _mover;
         float _currentLifeTime = 0f;
-
-        public float MoveSpeed => moveSpeed;
-
+        
         private void Awake()
         {
             _mover = new VerticalMover(this);

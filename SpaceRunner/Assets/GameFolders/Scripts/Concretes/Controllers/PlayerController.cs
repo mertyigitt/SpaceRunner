@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using SpaceRunner.Abstracts.Controllers;
 using SpaceRunner.Abstracts.Inputs;
+using SpaceRunner.Abstracts.Movements;
 using SpaceRunner.Inputs;
 using SpaceRunner.Managers;
 using SpaceRunner.Movements;
@@ -10,24 +12,20 @@ using UnityEngine.InputSystem;
 
 namespace SpaceRunner.Controllers
 {
-    public class PlayerController : MonoBehaviour
+    public class PlayerController : MyCharacterController, IEntityController
     {
-        [SerializeField] private float moveBoundary = 4.5f;
-        [SerializeField] private float moveSpeed = 10f;
         [SerializeField] float jumpForce = 500f;
         
-        private HorizontalMover _horizontalMover;
-        private JumpWithRigidbody _jump;
+        private IMover _mover;
+        private IJump _jump;
         private IInputReader _input;
         private float _horizontal;
         private bool isJump;
         private bool _isDead = false;
-
-        public float MoveSpeed => moveSpeed;
-        public float MoveBoundary => moveBoundary;
+        
         private void Awake()
         {
-            _horizontalMover = new HorizontalMover(this);
+            _mover = new HorizontalMover(this);
             _jump = new JumpWithRigidbody(this);
             _input = new InputReader(GetComponent<PlayerInput>());
         }
@@ -46,11 +44,11 @@ namespace SpaceRunner.Controllers
 
         private void FixedUpdate()
         {
-            _horizontalMover.TickFixed(_horizontal);
+            _mover.FixedTick(_horizontal);
 
             if (isJump)
             {
-                _jump.TickFixed(jumpForce);
+                _jump.FixedTick(jumpForce);
             }
             
             isJump = false;
@@ -58,9 +56,9 @@ namespace SpaceRunner.Controllers
 
         private void OnTriggerEnter(Collider other)
         {
-            EnemyController enemyController = other.GetComponent<EnemyController>();
+            IEntityController entityController = other.GetComponent<IEntityController>();
 
-            if (enemyController != null)
+            if (entityController != null)
             {
                 _isDead = true;
                 GameManager.Instance.StopGame();

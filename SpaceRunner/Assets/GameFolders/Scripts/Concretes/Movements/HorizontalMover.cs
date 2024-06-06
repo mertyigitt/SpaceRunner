@@ -1,31 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.ComTypes;
+using SpaceRunner.Abstracts.Controllers;
+using SpaceRunner.Abstracts.Movements;
 using SpaceRunner.Controllers;
 using UnityEngine;
 
 namespace SpaceRunner.Movements
 {
-    public class HorizontalMover
+    public class HorizontalMover : IMover
     {
-        private PlayerController _playerController;
+        private IEntityController _entityController;
         private float _moveSpeed;
         private float _moveBoundary;
 
-        public HorizontalMover(PlayerController playerController)
+        public float MoveSpeed => _moveSpeed;
+
+        public HorizontalMover(IEntityController entityController)
         {
-            _playerController = playerController;
-            _moveSpeed = _playerController.MoveSpeed;
-            _moveBoundary = _playerController.MoveBoundary;
+            _entityController = entityController;
+            _moveSpeed = _entityController.MoveSpeed;
+            _moveBoundary = entityController.MoveBoundary;
         }
         
-        public void TickFixed(float horizontal)
+        public void FixedTick(float horizontal)
         {
             if (horizontal == 0f) return;
             
-            _playerController.transform.Translate(Vector3.right * horizontal * Time.deltaTime * _moveSpeed);
+            _entityController.transform.Translate(Vector3.right * horizontal * Time.deltaTime * _moveSpeed);
 
-            float xBoundary = Mathf.Clamp(_playerController.transform.position.x, -_moveBoundary, _moveBoundary);
-            _playerController.transform.position = new Vector3(xBoundary, _playerController.transform.position.y, 0);
+            float xBoundary = Mathf.Clamp(_entityController.transform.position.x, -_moveBoundary, _moveBoundary);
+            _entityController.transform.position = new Vector3(xBoundary, _entityController.transform.position.y, 0);
         }
     }
 }
