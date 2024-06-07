@@ -585,6 +585,226 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 329500188785849249, guid: 4958014285132ab4dab2c3375fe711dc,
+        type: 3}
+      propertyPath: m_Behaviour
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 329500188785849249, guid: 4958014285132ab4dab2c3375fe711dc,
+        type: 3}
+      propertyPath: m_ControlPath
+      value: <DualShockGamepad>/leftStick
+      objectReference: {fileID: 0}
+    - target: {fileID: 329500188785849249, guid: 4958014285132ab4dab2c3375fe711dc,
+        type: 3}
+      propertyPath: m_UseIsolatedInputActions
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 329500188785849249, guid: 4958014285132ab4dab2c3375fe711dc,
+        type: 3}
+      propertyPath: m_PointerDownAction.m_Name
+      value: Pointer Down
+      objectReference: {fileID: 0}
+    - target: {fileID: 329500188785849249, guid: 4958014285132ab4dab2c3375fe711dc,
+        type: 3}
+      propertyPath: m_PointerMoveAction.m_Name
+      value: Pointer Move
+      objectReference: {fileID: 0}
+    - target: {fileID: 329500188785849249, guid: 4958014285132ab4dab2c3375fe711dc,
+        type: 3}
+      propertyPath: m_PointerMoveAction.m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 329500188785849249, guid: 4958014285132ab4dab2c3375fe711dc,
+        type: 3}
+      propertyPath: m_PointerMoveAction.m_Processors
+      value: AxisDeadzone(min=0.4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 329500188785849249, guid: 4958014285132ab4dab2c3375fe711dc,
+        type: 3}
+      propertyPath: m_PointerMoveAction.m_ExpectedControlType
+      value: Axis
+      objectReference: {fileID: 0}
+    - target: {fileID: 329500188785849249, guid: 4958014285132ab4dab2c3375fe711dc,
+        type: 3}
+      propertyPath: m_PointerMoveAction.m_SingletonActionBindings.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 329500188785849249, guid: 4958014285132ab4dab2c3375fe711dc,
+        type: 3}
+      propertyPath: m_PointerMoveAction.m_SingletonActionBindings.Array.data[0].m_Id
+      value: b8b14702-df9d-4ab2-becb-b0657669de87
+      objectReference: {fileID: 0}
+    - target: {fileID: 329500188785849249, guid: 4958014285132ab4dab2c3375fe711dc,
+        type: 3}
+      propertyPath: m_PointerMoveAction.m_SingletonActionBindings.Array.data[1].m_Id
+      value: 39df8de7-f272-4d6b-ae51-64efdde35d28
+      objectReference: {fileID: 0}
+    - target: {fileID: 329500188785849249, guid: 4958014285132ab4dab2c3375fe711dc,
+        type: 3}
+      propertyPath: m_PointerMoveAction.m_SingletonActionBindings.Array.data[2].m_Id
+      value: 965ea0f7-ba49-42e2-a751-bc55e3aeda4f
+      objectReference: {fileID: 0}
+    - target: {fileID: 329500188785849249, guid: 4958014285132ab4dab2c3375fe711dc,
+        type: 3}
+      propertyPath: m_PointerMoveAction.m_SingletonActionBindings.Array.data[3].m_Id
+      value: 269152fc-922e-488e-b4e5-d9e02eef282b
+      objectReference: {fileID: 0}
+    - target: {fileID: 329500188785849249, guid: 4958014285132ab4dab2c3375fe711dc,
+        type: 3}
+      propertyPath: m_PointerMoveAction.m_SingletonActionBindings.Array.data[4].m_Id
+      value: ecfa39a1-0a92-46fc-b6b2-acf3c7cfb74c
+      objectReference: {fileID: 0}
+    - target: {fileID: 329500188785849249, guid: 4958014285132ab4dab2c3375fe711dc,
+        type: 3}
+      propertyPath: m_PointerMoveAction.m_SingletonActionBindings.Array.data[5].m_Id
+      value: bb265dc3-5862-462d-b15a-80b40919466e
+      objectReference: {fileID: 0}
+    - target: {fileID: 329500188785849249, guid: 4958014285132ab4dab2c3375fe711dc,
+        type: 3}
+      propertyPath: m_PointerMoveAction.m_SingletonActionBindings.Array.data[0].m_Name
+      value: 1D Axis
+      objectReference: {fileID: 0}
+    - target: {fileID: 329500188785849249, guid: 4958014285132ab4dab2c3375fe711dc,
+        type: 3}
+      propertyPath: m_PointerMoveAction.m_SingletonActionBindings.Array.data[0].m_Path
+      value: 1DAxis
+      objectReference: {fileID: 0}
+    - target: {fileID: 329500188785849249, guid: 4958014285132ab4dab2c3375fe711dc,
+        type: 3}
+      propertyPath: m_PointerMoveAction.m_SingletonActionBindings.Array.data[1].m_Name
+      value: negative
+      objectReference: {fileID: 0}
+    - target: {fileID: 329500188785849249, guid: 4958014285132ab4dab2c3375fe711dc,
+        type: 3}
+      propertyPath: m_PointerMoveAction.m_SingletonActionBindings.Array.data[1].m_Path
+      value: <Gamepad>/leftStick/left
+      objectReference: {fileID: 0}
+    - target: {fileID: 329500188785849249, guid: 4958014285132ab4dab2c3375fe711dc,
+        type: 3}
+      propertyPath: m_PointerMoveAction.m_SingletonActionBindings.Array.data[2].m_Name
+      value: positive
+      objectReference: {fileID: 0}
+    - target: {fileID: 329500188785849249, guid: 4958014285132ab4dab2c3375fe711dc,
+        type: 3}
+      propertyPath: m_PointerMoveAction.m_SingletonActionBindings.Array.data[2].m_Path
+      value: <Gamepad>/leftStick/right
+      objectReference: {fileID: 0}
+    - target: {fileID: 329500188785849249, guid: 4958014285132ab4dab2c3375fe711dc,
+        type: 3}
+      propertyPath: m_PointerMoveAction.m_SingletonActionBindings.Array.data[3].m_Name
+      value: 1D Axis
+      objectReference: {fileID: 0}
+    - target: {fileID: 329500188785849249, guid: 4958014285132ab4dab2c3375fe711dc,
+        type: 3}
+      propertyPath: m_PointerMoveAction.m_SingletonActionBindings.Array.data[3].m_Path
+      value: 1DAxis
+      objectReference: {fileID: 0}
+    - target: {fileID: 329500188785849249, guid: 4958014285132ab4dab2c3375fe711dc,
+        type: 3}
+      propertyPath: m_PointerMoveAction.m_SingletonActionBindings.Array.data[4].m_Name
+      value: negative
+      objectReference: {fileID: 0}
+    - target: {fileID: 329500188785849249, guid: 4958014285132ab4dab2c3375fe711dc,
+        type: 3}
+      propertyPath: m_PointerMoveAction.m_SingletonActionBindings.Array.data[5].m_Name
+      value: positive
+      objectReference: {fileID: 0}
+    - target: {fileID: 329500188785849249, guid: 4958014285132ab4dab2c3375fe711dc,
+        type: 3}
+      propertyPath: m_PointerMoveAction.m_SingletonActionBindings.Array.data[0].m_Flags
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 329500188785849249, guid: 4958014285132ab4dab2c3375fe711dc,
+        type: 3}
+      propertyPath: m_PointerMoveAction.m_SingletonActionBindings.Array.data[1].m_Flags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 329500188785849249, guid: 4958014285132ab4dab2c3375fe711dc,
+        type: 3}
+      propertyPath: m_PointerMoveAction.m_SingletonActionBindings.Array.data[2].m_Flags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 329500188785849249, guid: 4958014285132ab4dab2c3375fe711dc,
+        type: 3}
+      propertyPath: m_PointerMoveAction.m_SingletonActionBindings.Array.data[3].m_Flags
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 329500188785849249, guid: 4958014285132ab4dab2c3375fe711dc,
+        type: 3}
+      propertyPath: m_PointerMoveAction.m_SingletonActionBindings.Array.data[4].m_Flags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 329500188785849249, guid: 4958014285132ab4dab2c3375fe711dc,
+        type: 3}
+      propertyPath: m_PointerMoveAction.m_SingletonActionBindings.Array.data[5].m_Flags
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 329500188785849249, guid: 4958014285132ab4dab2c3375fe711dc,
+        type: 3}
+      propertyPath: m_PointerMoveAction.m_SingletonActionBindings.Array.data[0].m_Action
+      value: Pointer Move
+      objectReference: {fileID: 0}
+    - target: {fileID: 329500188785849249, guid: 4958014285132ab4dab2c3375fe711dc,
+        type: 3}
+      propertyPath: m_PointerMoveAction.m_SingletonActionBindings.Array.data[1].m_Action
+      value: Pointer Move
+      objectReference: {fileID: 0}
+    - target: {fileID: 329500188785849249, guid: 4958014285132ab4dab2c3375fe711dc,
+        type: 3}
+      propertyPath: m_PointerMoveAction.m_SingletonActionBindings.Array.data[2].m_Action
+      value: Pointer Move
+      objectReference: {fileID: 0}
+    - target: {fileID: 329500188785849249, guid: 4958014285132ab4dab2c3375fe711dc,
+        type: 3}
+      propertyPath: m_PointerMoveAction.m_SingletonActionBindings.Array.data[3].m_Action
+      value: Pointer Move
+      objectReference: {fileID: 0}
+    - target: {fileID: 329500188785849249, guid: 4958014285132ab4dab2c3375fe711dc,
+        type: 3}
+      propertyPath: m_PointerMoveAction.m_SingletonActionBindings.Array.data[4].m_Action
+      value: Pointer Move
+      objectReference: {fileID: 0}
+    - target: {fileID: 329500188785849249, guid: 4958014285132ab4dab2c3375fe711dc,
+        type: 3}
+      propertyPath: m_PointerMoveAction.m_SingletonActionBindings.Array.data[5].m_Action
+      value: Pointer Move
+      objectReference: {fileID: 0}
+    - target: {fileID: 772819356171624395, guid: 4958014285132ab4dab2c3375fe711dc,
+        type: 3}
+      propertyPath: m_MovementRange
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349563210784510876, guid: 4958014285132ab4dab2c3375fe711dc,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349563210784510876, guid: 4958014285132ab4dab2c3375fe711dc,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349563210784510876, guid: 4958014285132ab4dab2c3375fe711dc,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349563210784510876, guid: 4958014285132ab4dab2c3375fe711dc,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349563210784510876, guid: 4958014285132ab4dab2c3375fe711dc,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -670
+      objectReference: {fileID: 0}
+    - target: {fileID: 3349563210784510876, guid: 4958014285132ab4dab2c3375fe711dc,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -258
+      objectReference: {fileID: 0}
     - target: {fileID: 3474463145212276295, guid: 4958014285132ab4dab2c3375fe711dc,
         type: 3}
       propertyPath: m_Pivot.x
@@ -691,7 +911,8 @@ PrefabInstance:
       value: GameCanvas
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 417674029892895719, guid: 4958014285132ab4dab2c3375fe711dc, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4958014285132ab4dab2c3375fe711dc, type: 3}
