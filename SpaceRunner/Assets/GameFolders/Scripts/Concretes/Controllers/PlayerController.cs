@@ -14,7 +14,15 @@ namespace SpaceRunner.Controllers
 {
     public class PlayerController : MyCharacterController, IEntityController
     {
+        #region Self Variables
+
+        #region Serialized Variables
+        
         [SerializeField] float jumpForce = 500f;
+
+        #endregion
+
+        #region Private Variables
         
         private IMover _mover;
         private IJump _jump;
@@ -22,6 +30,10 @@ namespace SpaceRunner.Controllers
         private float _horizontal;
         private bool isJump;
         private bool _isDead = false;
+
+        #endregion
+
+        #endregion
         
         private void Awake()
         {

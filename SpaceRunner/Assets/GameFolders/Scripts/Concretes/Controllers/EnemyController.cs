@@ -11,12 +11,31 @@ namespace SpaceRunner.Controllers
 {
     public class EnemyController : MyCharacterController, IEntityController
     {
+        #region Self Variables
+
+        #region Serialized Variables
+
         [SerializeField] private float maxLifeTime = 6f;
         [SerializeField] private EnemyEnum enemyEnum;
-        
+
+        #endregion
+
+        #region Private Variables
+
         private VerticalMover _mover;
         float _currentLifeTime = 0f;
+
+        #endregion
+
+        #region Public Variables
+        
         public EnemyEnum EnemyType => enemyEnum;
+
+        #endregion
+
+        #endregion
+        
+        
         private void Awake()
         {
             _mover = new VerticalMover(this);
@@ -41,6 +60,12 @@ namespace SpaceRunner.Controllers
         private void KillYourSelf()
         {
             EnemyManager.Instance.SetPool(this);
+        }
+
+        public void SetMoveSpeed(float moveSpeed)
+        {
+            if (moveSpeed < this.moveSpeed) return;
+            this.moveSpeed = moveSpeed;
         }
     }
 }

@@ -9,13 +9,31 @@ namespace SpaceRunner.Managers
 {
     public class EnemyManager : SingletonMonoBehaviourObject<EnemyManager>
     {
+
+        #region Self Variables
+
+        #region Serialized Variables
+
         [SerializeField] float addDelayTime = 50f;
         [SerializeField] private EnemyController[] enemyPrefabs;
 
+        #endregion
+
+        #region Private Variables
+        
         private Dictionary<EnemyEnum, Queue<EnemyController>>  _enemies = new Dictionary<EnemyEnum, Queue<EnemyController>>();
+        private float _moveSpeed;
+        
+        #endregion
+
+        #region Public Variables
 
         public float AddDelayTime => addDelayTime;
         public int Count => enemyPrefabs.Length;
+
+        #endregion
+
+        #endregion
         
         private void Awake()
         {
@@ -61,10 +79,25 @@ namespace SpaceRunner.Managers
                 for (int i = 0; i < 2; i++)
                 {
                     EnemyController newEnemy = Instantiate(enemyPrefabs[(int)enemyType]);
+                    newEnemy.gameObject.SetActive(false);
                     enemyControllers.Enqueue(newEnemy);
                 }
             }
-            return enemyControllers.Dequeue();
+            
+            EnemyController enemyController = enemyControllers.Dequeue();
+            enemyController.SetMoveSpeed(_moveSpeed);
+            
+            return enemyController;
+        }
+
+        public void SetMoveSpeed(float moveSpeed)
+        {
+            _moveSpeed = moveSpeed;
+        }
+        
+        public void SetAddDelayTime(float addDelayTime)
+        {
+            addDelayTime = addDelayTime;
         }
     }
 }

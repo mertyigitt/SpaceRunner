@@ -9,20 +9,24 @@ namespace SpaceRunner.Movements
 {
     public class VerticalMover : IMover
     {
+        #region Self Variables
+
+        #region Private Variable
+
         private IEntityController _entityController;
-        private float _moveSpeed;
 
-        public float MoveSpeed => _moveSpeed;
+        #endregion
 
+        #endregion
+        
         public VerticalMover(IEntityController entityController)
         {
             _entityController = entityController;
-            _moveSpeed = entityController.MoveSpeed;
         }
 
         public void FixedTick(float vertical = 1)
         {
-            _entityController.transform.Translate(Vector3.back * vertical * _moveSpeed * Time.deltaTime);
+            _entityController.transform.Translate(Vector3.back * vertical * _entityController.MoveSpeed * Time.deltaTime);
         }
     }
 }

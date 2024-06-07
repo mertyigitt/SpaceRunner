@@ -6,10 +6,23 @@ namespace SpaceRunner.Inputs
 {
     public class InputReader : IInputReader
     {
+        #region Self Variables
+
+        #region Private Variables
+        
         private PlayerInput _playerInput;
+
+        #endregion
+
+        #region Public Variables
+
         public float Horizontal { get; private set; }
         public bool IsJump { get; private set; }
 
+        #endregion
+
+        #endregion
+        
         public InputReader(PlayerInput playerInput)
         {
             _playerInput = playerInput;

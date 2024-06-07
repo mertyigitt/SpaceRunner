@@ -8,8 +8,16 @@ namespace SpaceRunner.UIs
 {
     public class GameCanvas : MonoBehaviour
     {
+        #region Self Variables
+
+        #region Serialized Variables
+
         [SerializeField] private GameOverPanel _gameOverPanel;
 
+        #endregion
+
+        #endregion
+        
         private void Awake()
         {
             _gameOverPanel.gameObject.SetActive(false);

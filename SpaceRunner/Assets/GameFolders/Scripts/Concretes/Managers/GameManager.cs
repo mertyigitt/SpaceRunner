@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using SpaceRunner.Abstracts.Utilities;
+using SpaceRunner.ScriptableObjects;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,7 +10,44 @@ namespace SpaceRunner.Managers
 {
     public class GameManager : SingletonMonoBehaviourObject<GameManager>
     {
+        #region Self Variables
+
+        #region Serialized VAriables
+
+        [SerializeField] private LevelDifficultyData[] _levelDifficultyDatas;
+
+        #endregion
+
+        #region Private Variables
+
+        private int _difficultyIndex;
+
+        #endregion
+        
+        #region Public Variables
+
+        public int DifficultyIndex 
+        { 
+            get => _difficultyIndex;
+            set
+            {
+                if (_difficultyIndex < 0 || _difficultyIndex > _levelDifficultyDatas.Length)
+                {
+                    LoadScene("Menu");
+                }
+                else
+                {
+                    _difficultyIndex = value;
+                }
+            }
+        }
         public event Action OnGameStop;
+        public LevelDifficultyData LevelDifficultyData => _levelDifficultyDatas[DifficultyIndex];
+        
+
+        #endregion
+
+        #endregion
         
         private void Awake()
         {

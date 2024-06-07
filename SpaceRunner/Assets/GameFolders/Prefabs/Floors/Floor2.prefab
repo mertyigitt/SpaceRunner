@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6502010707523891964
+--- !u!1 &2040951293096749943
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,10 +8,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8859959587444774482}
-  - component: {fileID: 8758296479217159521}
-  - component: {fileID: 5498991401743670421}
-  - component: {fileID: 2861420292345757450}
+  - component: {fileID: 7168763644726267414}
+  - component: {fileID: 1274007230816048066}
+  - component: {fileID: 1580413777961449760}
+  - component: {fileID: 5313704907640751939}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -19,36 +19,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8859959587444774482
+--- !u!4 &7168763644726267414
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6502010707523891964}
+  m_GameObject: {fileID: 2040951293096749943}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -1, z: 22}
   m_LocalScale: {x: 1, y: 1, z: 6}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3384304067593418819}
+  m_Father: {fileID: 3022496273506660544}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8758296479217159521
+--- !u!33 &1274007230816048066
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6502010707523891964}
+  m_GameObject: {fileID: 2040951293096749943}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &5498991401743670421
+--- !u!23 &1580413777961449760
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6502010707523891964}
+  m_GameObject: {fileID: 2040951293096749943}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c1039856c953f6143b366284c53ece75, type: 2}
+  - {fileID: 2100000, guid: ab4269e12763c2845868256b389e5b9b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -84,13 +84,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &2861420292345757450
+--- !u!64 &5313704907640751939
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6502010707523891964}
+  m_GameObject: {fileID: 2040951293096749943}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -106,7 +106,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &2237232997135557775
+--- !u!1001 &1732013697868688396
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -117,12 +117,12 @@ PrefabInstance:
     - target: {fileID: -1001741394666964600, guid: ea58991328652f34cbdfffc8fee5b43c,
         type: 3}
       propertyPath: moveSpeed
-      value: 0.2
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3517748255702578189, guid: ea58991328652f34cbdfffc8fee5b43c,
         type: 3}
       propertyPath: m_Name
-      value: Floor1
+      value: Floor2
       objectReference: {fileID: 0}
     - target: {fileID: 3601552663753039052, guid: ea58991328652f34cbdfffc8fee5b43c,
         type: 3}
@@ -180,12 +180,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3601552663753039052, guid: ea58991328652f34cbdfffc8fee5b43c,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8859959587444774482}
+      addedObject: {fileID: 7168763644726267414}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea58991328652f34cbdfffc8fee5b43c, type: 3}
---- !u!4 &3384304067593418819 stripped
+--- !u!4 &3022496273506660544 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3601552663753039052, guid: ea58991328652f34cbdfffc8fee5b43c,
     type: 3}
-  m_PrefabInstance: {fileID: 2237232997135557775}
+  m_PrefabInstance: {fileID: 1732013697868688396}
   m_PrefabAsset: {fileID: 0}

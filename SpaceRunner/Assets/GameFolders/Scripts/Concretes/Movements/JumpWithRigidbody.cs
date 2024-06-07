@@ -8,9 +8,22 @@ namespace SpaceRunner.Movements
 {
     public class JumpWithRigidbody : IJump
     {
+        #region Self Variables
+
+        #region Private Variables
+
         private Rigidbody _rigidbody;
+
+        #endregion
+
+        #region Public Variables
+
         public bool CanJump => _rigidbody.velocity.y != 0;
 
+        #endregion
+
+        #endregion
+        
         public JumpWithRigidbody(PlayerController playerController)
         {
             _rigidbody = playerController.GetComponent<Rigidbody>();

@@ -8,9 +8,17 @@ namespace SpaceRunner.UIs
 {
     public class TimeCounter : MonoBehaviour
     {
+        #region Self Variables
+
+        #region Private Variables
+
         private TMP_Text _text;
         private float _currentTime;
 
+        #endregion
+
+        #endregion
+        
         private void Awake()
         {
             _text = GetComponent<TMP_Text>();

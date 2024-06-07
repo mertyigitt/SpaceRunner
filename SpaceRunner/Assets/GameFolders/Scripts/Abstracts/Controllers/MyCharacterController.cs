@@ -7,7 +7,7 @@ namespace SpaceRunner.Abstracts.Controllers
     public abstract class MyCharacterController : MonoBehaviour
     {
         [SerializeField] private float moveBoundary = 4.5f;
-        [SerializeField] float moveSpeed = 10f;
+        [SerializeField] protected float moveSpeed = 7f;
         
         public float MoveSpeed => moveSpeed;
         public float MoveBoundary => moveBoundary;
